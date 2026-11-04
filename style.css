@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background-color: #ffa052;
+    font-family: Arial, sans-serif;
+    color: #243447;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #243447;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000025;
+}
+
+form {
+    flex: 2;
+}
+
+label, legend {
+    font-weight: bold;
+}
+
+select, input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 10px 0 20px;
+}
+
+legend {
+    margin-bottom: 10px;
+}
+
+.opciones, .ingredientes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.opciones label, .ingredientes label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: calc(33.33% - 10px);
+    min-width: 145px;
+    padding: 10px;
+    background-color: #f1f3f5;
+    border-radius: 7px;
+    font-weight: normal;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #ff7838;
+}
+
+.domicilio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.domicilio input {
+    width: auto;
+}
+
+.total {
+    padding: 18px;
+    background-color: #293e52;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff7838;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e85e22;
+    transform: scale(1.02);
+}
+
+.galeria {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .opciones label, .ingredientes label {
+        width: 100%;
+    }
+
+    .galeria {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .galeria img {
+        flex: 1 1 140px;
+        height: 130px;
+    }
+}
